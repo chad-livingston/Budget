@@ -1,6 +1,8 @@
 public class Settings {
     private int budget;
     private String budgetLeftInterval;
+
+
     public Settings(){
         this.budget = 4000;
         this.budgetLeftInterval = "daily";
@@ -18,5 +20,12 @@ public class Settings {
     }
     public void setBudgetLeftInterval(String userInterval){
         this.budgetLeftInterval = userInterval;
+    }
+    public String toString(){
+
+        return "Current Budget: " + this.budget + "\n"
+                + "Current Interval: " + this.budgetLeftInterval + "\n"
+                + "";
+
     }
 }
