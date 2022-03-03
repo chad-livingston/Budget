@@ -1,5 +1,5 @@
 public class Settings {
-    private int budget;
+    private double budget;
     private String budgetLeftInterval;
 
 
@@ -8,10 +8,10 @@ public class Settings {
         this.budgetLeftInterval = "daily";
     }
 
-    public int getBudget() {
+    public double getBudget() {
         return budget;
     }
-    public void setBudget(int budgetVal){
+    public void setBudget(double budgetVal){
         this.budget = budgetVal;
     }
 
