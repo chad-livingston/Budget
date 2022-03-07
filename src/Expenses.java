@@ -25,6 +25,23 @@ public class Expenses {
     public int expenseListSize(){
         return expensesList.size();
     }
+    public double sumExpenseList(){
+        double sumOfAllTransaction = 0;
+        for (Transaction transactionCost : expensesList){
+            sumOfAllTransaction += transactionCost.getTransactionCost();
+        }
+        return sumOfAllTransaction;
+    }
+    public double sumExpenseType(String type){
+        double sumType = 0;
+        for (Transaction transCost : expensesList){
+            if (transCost.getTransactionType().equals(type)){
+                sumType += transCost.getTransactionCost();
+            }
+        }
+
+        return sumType;
+    }
 
     public String toString() {
         String transactions = "";

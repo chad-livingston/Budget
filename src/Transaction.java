@@ -12,15 +12,19 @@ public class Transaction {
         this.transactionType = type;
 
     }
-   // public void setTransactionName(String name){
-     //   this.transactionName = name;
-    //}
+
     public int getID(){
         return this.transactionID;
     }
+    public double getTransactionCost(){
+        return this.transactionCost;
+    }
+    public String getTransactionType(){
+        return this.transactionType;
+    }
 
     public String toString(){
-        return this.transactionID + " " + this.transactionName + ":: " + this.transactionCost + " TYPE: " + this.transactionType + "\n";
+        return "ID:" + this.transactionID + " " + this.transactionName + ":: " + this.transactionCost + " TYPE: " + this.transactionType + "\n";
     }
 
 

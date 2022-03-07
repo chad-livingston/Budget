@@ -70,6 +70,20 @@ public class Budget {
                                 break;
                             case "viewtrans":
                                 System.out.println(expenses);
+                                System.out.println("Sum of all transactions: " + expenses.sumExpenseList());
+                                break;
+                            case "sum":
+                                System.out.println("What type would you like to sum? opts... all, recurring, variable");
+                                String userTypeToSum = in.nextLine().toLowerCase();
+                                if (userTypeToSum.equals("all")){
+                                    System.out.println("Sum of " + userTypeToSum + " transactions: " + expenses.sumExpenseList());
+                                }
+                                if (userTypeToSum.equals("recurring") || userTypeToSum.equals("variable")){
+                                    System.out.println("Sum of " + userTypeToSum + " transactions: " + expenses.sumExpenseType(userTypeToSum));
+                                }
+                                if (expenses.expenseListSize() == 0){
+                                    System.out.println("There are no transactions in the list to sum.");
+                                }
                                 break;
                             case "clear":
                                 System.out.println("Are you sure you want to clear the list of transactions? y to confirm");
@@ -108,6 +122,9 @@ public class Budget {
                                 settings.setBudget(userBudgetVal);
                                 System.out.println("Your new budget has been set.\n"
                                         + "Budget: " + settings.getBudget());
+                                break;
+                            case "categories":
+
                                 break;
                             case "interval":
                                 break;
